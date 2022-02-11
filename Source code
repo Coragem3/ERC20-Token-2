@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.2;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract BowdenCoin is ERC20 {
+    constructor() ERC20("BowdenCoin", "BDC") {
+        _mint(msg.sender, 10000000000000000000000 * 10 ** decimals());
+    }
+}
+
+
+/// This code was made in Openzeppelin Wizard. I only changed the coin name, initials and initial minted amount. (a reminder that 1^22 is only 1000 tokens as it is in Wei is 1^18 of Ether.
+/// I deployed this to the ropsten network.
+
+////Once deployed, you can grab the address and enter it into Etherscan Ropsten. This will give you you the token name, details and total supply. It will also show where the token was deployed from. If you look at the right of Etherscan
+////you should be able to see 'Profile Summary' if you grab this address you can create a new token in Metamask. For me I used my main Ropsten account and then added a new token to that. You add the address from the profile summary, and it will recognise the initials. When you create it. The coin will have your desired balance.
+
